@@ -43,7 +43,7 @@ class HomeView extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(vertical: 8),
             width: double.infinity,
-            color: Colors.amber.withValues(alpha: 0.1),
+            color: Colors.amber.withOpacity(0.1),
             child: Text(
               'الدور الحالي: ${ptt.role == UserRole.superAdmin ? "أدمن رئيسي" : "مستخدم"}',
               textAlign: TextAlign.center,
@@ -130,7 +130,7 @@ class HomeView extends StatelessWidget {
                         margin: const EdgeInsets.only(right: 12),
                         padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          color: Colors.white.withValues(alpha: 0.05),
+                          color: Colors.white.withOpacity(0.05),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Column(
@@ -185,8 +185,8 @@ class HomeView extends StatelessWidget {
               : (isTransmitting ? Colors.red : Colors.amber),
           boxShadow: [
             BoxShadow(
-              color: (isTransmitting ? Colors.red : Colors.amber).withValues(
-                alpha: 0.4,
+              color: (isTransmitting ? Colors.red : Colors.amber).withOpacity(
+                0.4,
               ),
               blurRadius: 20,
               spreadRadius: 5,
